@@ -1,0 +1,6 @@
+---
+applications:
+- name: anniversaries-web
+  path: ./dist
+  memory: 512M
+  buildpack: staticfile_buildpack
