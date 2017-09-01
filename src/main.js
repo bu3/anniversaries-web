@@ -8,6 +8,7 @@ import router from './router';
 Vue.use(VueResource);
 
 Vue.config.productionTip = false;
+Vue.config.apiServer = process.env.API_SERVER;
 
 /* eslint-disable no-new */
 new Vue({

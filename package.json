@@ -10,7 +10,8 @@
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "e2e-with-mocks": "concurrently --kill-others --success first \"npm run mock-server > /dev/null\" \"NODE_ENV=dev npm run e2e\" ",
+    "test": "npm run unit && npm run e2e-with-mocks",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "mock-server": "node node_modules/json-server/bin/index.js --watch ./json-server/db.json",
     "start-with-mocks": "concurrently --kill-others --success first \"npm run mock-server\" \"npm start\" "
