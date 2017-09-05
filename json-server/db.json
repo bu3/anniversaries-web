@@ -1,11 +1,13 @@
 {
   "anniversaries": [
     {
+      "id": 1,
       "name": "Fabio",
       "hireDate": "2015-11-01",
       "anniversaryDate": "2017-11-01"
     },
     {
+      "id": 2,
       "name": "Another Pivot",
       "hireDate": "2010-11-01",
       "anniversaryDate": "2017-11-01"
