@@ -9,24 +9,6 @@
       "name": "Another Pivot",
       "hireDate": "2010-11-01",
       "anniversaryDate": "2017-11-01"
-    },
-    {
-      "name": "Anco Marzio",
-      "hireDate": "2016-01-01",
-      "id": 1504632297590,
-      "anniversaryDate": "2017-01-01"
-    },
-    {
-      "name": "Anco Marzio",
-      "hireDate": "2017-01-01",
-      "id": 1504632353443,
-      "anniversaryDate": "2018-01-01"
-    },
-    {
-      "name": "1",
-      "hireDate": "2015-01-01",
-      "id": 1504632636772,
-      "anniversaryDate": "2016-01-01"
     }
   ]
 }
