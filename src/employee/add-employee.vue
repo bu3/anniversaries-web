@@ -19,7 +19,7 @@
     },
     methods: {
       save() {
-        Vue.http.post(`${Vue.config.apiServer}/anniversaries`, this.employee).then(() => {
+        Vue.http.post(`${Vue.config.apiServer}/employees`, this.employee).then(() => {
           this.$router.push('/');
         });
       },
