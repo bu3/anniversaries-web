@@ -44,7 +44,7 @@
     data() {
       return {
         anniversaries: [],
-        months: 3,
+        months: 6,
       };
     },
     created() {
