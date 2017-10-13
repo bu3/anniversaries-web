@@ -7,14 +7,19 @@ module.exports = {
     // default: http://localhost:8080
     // see nightwatch.conf.js
     const devServer = browser.globals.devServerURL;
+    const homePage = browser.page.homePage();
 
     browser
       .url(devServer)
-      .waitForElementVisible('#app', 5000)
-      .assert.elementPresent('.anniversaries')
-      .assert.containsText('h2', 'Anniversaries')
-      .assert.containsText('li.anniversary:first-child', 'Fabio - 2017-11-01')
-      .assert.containsText('li.anniversary:nth-child(2)', 'Another Pivot - 2017-11-01')
-      .end();
+      .waitForElementVisible('#app', 5000);
+
+    homePage.expect.element('@anniversariesTitle').text.to.contain('Anniversaries');
+    browser.elements('css selector', homePage.props.anniversaryLocator, (result) => {
+      browser.assert.equal(result.value.length, 2);
+    });
+    homePage.expect.element('@firstAnniversary').text.to.contain('Fabio - 2017-11-01');
+    homePage.expect.element('@secondAnniversary').text.to.contain('Another Pivot - 2017-11-01');
+
+    browser.end();
   },
 };
