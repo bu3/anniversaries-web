@@ -1,12 +1,6 @@
 <template>
     <div class="anniversaries">
-        <div>
-            <router-link to="/addEmployee" tag="button" class="navButton">Add Employee</router-link>
-        </div>
-
-        <iframe src="https://giphy.com/embed/g9582DNuQppxC" width="480" height="270" frameBorder="0" class="giphy-embed"
-                allowFullScreen></iframe>
-        <p><a href="https://giphy.com/gifs/hero0fwar-karmawhore-rhyming-g9582DNuQppxC">via GIPHY</a></p>
+        <congratulations></congratulations>
         <div class="months">
             Months:
             <vue-slider
@@ -21,10 +15,10 @@
             >
             </vue-slider>
         </div>
-        <div class="anniversaries-list  ">
+        <div class="anniversaries-list">
             <h2>Anniversaries</h2>
             <ul>
-                <li v-for="anniversary in anniversaries">
+                <li class="anniversary" v-for="anniversary in anniversaries">
                     {{ anniversary.name}} - {{ anniversary.anniversaryDate }}
                 </li>
             </ul>
@@ -35,11 +29,13 @@
 <script>
   import Vue from 'vue';
   import vueSlider from 'vue-slider-component';
+  import congratulations from '@/components/Congratulations';
 
   export default {
-    name: 'hello',
+    name: 'anniversaries',
     components: {
       vueSlider,
+      congratulations,
     },
     data() {
       return {

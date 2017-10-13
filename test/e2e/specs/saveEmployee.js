@@ -19,7 +19,7 @@ module.exports = {
       .setValue('input.hiringDate', '2017-01-01')
       .click('button[class="saveBtn"]')
       .waitForElementVisible('#app', 5000)
-      .assert.containsText('li:nth-child(3)', 'Anco Marzio - 2018-01-01')
+      .assert.containsText('li.anniversary:nth-child(3)', 'Anco Marzio - 2018-01-01')
       .end();
   },
 };
