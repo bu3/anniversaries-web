@@ -3,6 +3,7 @@
     <h1>Add new employee</h1>
     <input class="name" v-model="employee.name"/>
     <input class="hiringDate" v-model="employee.hireDate"/>
+    <input class="picture" v-model="employee.photoURL"/>
     <button class="saveBtn" v-on:click="save">Save</button>
   </div>
 </template>

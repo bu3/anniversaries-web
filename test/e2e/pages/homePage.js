@@ -11,5 +11,6 @@ module.exports = {
     firstAnniversary: `${anniversaryLocator}:first-child`,
     secondAnniversary: `${anniversaryLocator}:nth-child(2)`,
     thirdAnniversary: `${anniversaryLocator}:nth-child(3)`,
+    thirdAnniversaryPicture: `${anniversaryLocator}:nth-child(3) img`,
   },
 };

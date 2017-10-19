@@ -19,6 +19,7 @@
             <h2>Anniversaries</h2>
             <ul>
                 <li class="anniversary" v-for="anniversary in anniversaries">
+                  <img :src="anniversary.photoURL" v-if="anniversary.photoURL" />
                     {{ anniversary.name}} - {{ anniversary.anniversaryDate }}
                 </li>
             </ul>
@@ -87,5 +88,11 @@
     .anniversaries-list {
         width: 100%;
         float: left;
+    }
+
+    .anniversaries img {
+      width: 48px;
+      height: 48px;
+      vertical-align: middle;
     }
 </style>

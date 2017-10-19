@@ -9,5 +9,6 @@ module.exports = {
     title: 'h1',
     employeeName: 'input.name',
     employeeHiringDate: 'input.hiringDate',
+    employeePictureUrl: 'input.picture',
   },
 };
