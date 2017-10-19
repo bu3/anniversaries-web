@@ -7,19 +7,31 @@ module.exports = {
     // see nightwatch.conf.js
     const devServer = browser.globals.devServerURL;
 
+    const saveEmployeePage = browser.page.saveEmployeePage();
+    const homePage = browser.page.homePage();
+
     // default: http://localhost:8080
     browser
       .url(devServer)
-      .waitForElementVisible('#app', 5000)
-      .click('button[class="navButton"]')
-      .pause(5000)
-      .waitForElementVisible('#addEmployee', 5000)
-      .assert.containsText('h1', 'Add new employee')
-      .setValue('input.name', 'Anco Marzio')
-      .setValue('input.hiringDate', '2017-01-01')
-      .click('button[class="saveBtn"]')
-      .waitForElementVisible('#app', 5000)
-      .assert.containsText('li.anniversary:nth-child(3)', 'Anco Marzio - 2018-01-01')
-      .end();
+      .waitForElementVisible('#app', 5000);
+
+    homePage
+      .click('button[class="navButton"]');
+
+    browser
+      .waitForElementVisible('#addEmployee', 5000);
+
+    saveEmployeePage
+      .expect.element('@title').text.to.contain('Add new employee');
+
+    saveEmployeePage.setValue('@employeeName', 'Anco Marzio');
+    saveEmployeePage.setValue('@employeeHiringDate', '2017-01-01');
+    saveEmployeePage.click('@saveButton');
+
+    browser.pause(5000).waitForElementVisible('#app', 5000);
+
+    homePage.expect.element('@thirdAnniversary').text.to.contain('Anco Marzio - 2018-01-01');
+
+    browser.end();
   },
 };
