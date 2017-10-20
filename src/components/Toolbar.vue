@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="nav">
         <router-link to="/addEmployee" tag="button" class="navButton">Add Employee</router-link>
     </div>
 </template>
@@ -13,6 +13,6 @@
   };
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    @import "../assets/stylesheets/app";
 </style>
