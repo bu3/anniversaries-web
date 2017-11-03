@@ -1,7 +1,8 @@
 <template>
-    <div class="nav">
+    <md-toolbar>
+        <h1 class="md-title">My Title</h1>
         <router-link to="/addEmployee" tag="button" class="navButton">Add Employee</router-link>
-    </div>
+    </md-toolbar>
 </template>
 
 <script>

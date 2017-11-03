@@ -9,17 +9,17 @@ module.exports = {
 
     const saveEmployeePage = browser.page.saveEmployeePage();
     const homePage = browser.page.homePage();
+    const navBarPage = browser.page.navBar();
 
     // default: http://localhost:8080
     browser
       .url(devServer)
       .waitForElementVisible('#app', 5000);
 
-    homePage
-      .click('button[class="navButton"]');
+    navBarPage.click('@menu');
+    navBarPage.click('@goAddEmployee');
 
-    browser
-      .waitForElementVisible('#addEmployee', 5000);
+    browser.waitForElementVisible('#addEmployee', 5000);
 
     saveEmployeePage
       .expect.element('@title').text.to.contain('Add new employee');

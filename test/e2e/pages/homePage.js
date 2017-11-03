@@ -5,7 +5,6 @@ module.exports = {
     anniversaryLocator,
   },
   elements: {
-    addEmployeeButton: 'button[class="navButton"]',
     anniversariesTitle: 'h2',
     anniversaries: '.anniversaries',
     firstAnniversary: `${anniversaryLocator}:first-child`,

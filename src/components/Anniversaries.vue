@@ -1,29 +1,29 @@
 <template>
     <div class="anniversaries">
-        <congratulations></congratulations>
         <div class="months">
             Months:
-            <vue-slider
-                    ref="slider"
-                    v-model="months"
-                    :width=280
-                    :min="0"
-                    :max="24"
-                    :interval="6"
-                    :height="8"
-                    :piecewise="true"
-            >
-            </vue-slider>
+            <div>
+                <md-radio v-model="months" id="my-test4" name="my-test-group2" md-value="0" class="md-primary">All</md-radio>
+                <md-radio v-model="months" id="my-test5" name="my-test-group2" md-value="3" class="md-primary">Next 3 months</md-radio>
+                <md-radio v-model="months" id="my-test6" name="my-test-group2" md-value="6" class="md-primary">Next 6 months</md-radio>
+                <md-radio v-model="months" id="my-test7" name="my-test-group2" md-value="12" class="md-primary">Next 12 months</md-radio>
+            </div>
         </div>
+
         <div class="anniversaries-list">
             <h2>Anniversaries</h2>
             <ul>
                 <li class="anniversary" v-for="anniversary in anniversaries">
-                  <img :src="anniversary.photoURL" v-if="anniversary.photoURL" />
+                    <img :src="anniversary.photoURL" v-if="anniversary.photoURL" />
                     {{ anniversary.name}} - {{ anniversary.anniversaryDate }}
                 </li>
             </ul>
         </div>
+
+        <div style="display: none">
+            <congratulations></congratulations>
+        </div>
+
     </div>
 </template>
 
@@ -81,13 +81,8 @@
         color: #42b983;
     }
 
-    .months {
-        float: left;
-    }
-
     .anniversaries-list {
-        width: 100%;
-        float: left;
+
     }
 
     .anniversaries img {
