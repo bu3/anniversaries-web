@@ -3,10 +3,10 @@
         <md-sidenav class="md-left md-fixed" ref="sidebar">
             <md-list>
                 <md-list-item @click="goTo('/')" class="menu-home">
-                    Home
+                    <md-icon>home</md-icon> Home
                 </md-list-item>
                 <md-list-item @click="goTo('/addEmployee')" class="menu-add-employee">
-                    Add Employee
+                    <md-icon >people</md-icon>Add Employee
                 </md-list-item>
             </md-list>
         </md-sidenav>
@@ -14,7 +14,7 @@
         <md-whiteframe md-elevation="3" class="main-toolbar">
             <md-toolbar class="md-small">
                 <div class="md-toolbar-container">
-                    <md-button class="md-icon-button" @click="$refs.sidebar.toggle()">
+                    <md-button class="md-icon-button menu" @click="$refs.sidebar.toggle()">
                         <md-icon>menu</md-icon>
                     </md-button>
 
@@ -39,13 +39,8 @@
 </template>
 
 <script>
-  import Toolbar from '@/components/Toolbar';
-
   export default {
     name: 'app',
-    components: {
-      Toolbar,
-    },
     methods: {
       goTo(link) {
         this.$router.push(link);
@@ -56,8 +51,13 @@
 </script>
 
 <style lang="scss">
-
     @import "assets/stylesheets/app.scss";
 
+    .app-viewport {
+        .main-content {
+            width: 80%;
+            margin: 50px auto;
+        }
+    }
 
 </style>

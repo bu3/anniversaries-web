@@ -5,7 +5,7 @@ module.exports = {
     anniversaryLocator,
   },
   elements: {
-    saveButton: 'button[class="saveBtn"]',
+    saveButton: 'button.saveBtn',
     title: 'h1',
     employeeName: 'input.name',
     employeeHiringDate: 'input.hiringDate',

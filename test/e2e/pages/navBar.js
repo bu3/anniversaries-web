@@ -5,7 +5,7 @@ module.exports = {
     anniversaryLocator,
   },
   elements: {
-    menu: 'i.material-icons',
+    menu: 'button.menu',
     goHome: '.menu-home',
     goAddEmployee: '.menu-add-employee',
   },
