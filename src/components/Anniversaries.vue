@@ -43,7 +43,7 @@
     },
     methods: {
       load() {
-        const url = this.months && this.months !== 0 ? `${Vue.config.apiServer}/anniversaries?months=${this.months}` : `${Vue.config.apiServer}/anniversaries`;
+        const url = this.months && this.months !== '0' ? `${Vue.config.apiServer}/anniversaries?months=${this.months}` : `${Vue.config.apiServer}/anniversaries`;
         Vue.http.get(url).then((response) => {
           this.anniversaries = response.body;
         });

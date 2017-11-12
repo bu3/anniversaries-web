@@ -33,7 +33,6 @@
     },
     methods: {
       save() {
-        console.log(this.employee);
         Vue.http.post(`${Vue.config.apiServer}/employees`, this.employee).then(() => {
           this.$router.push('/');
         });
