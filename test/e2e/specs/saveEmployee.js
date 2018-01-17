@@ -24,14 +24,14 @@ module.exports = {
     saveEmployeePage.expect.element('@title').text.to.contain('Add new employee');
 
     saveEmployeePage.setValue('@employeeName', 'Anco Marzio');
-    saveEmployeePage.setValue('@employeeHiringDate', '2017-01-01');
+    saveEmployeePage.setValue('@employeeHiringDate', '01/01/2017');
     saveEmployeePage.setValue('@employeePictureUrl', 'https://www.spreadshirt.com/image-server/v1/mp/designs/1010111502,width=178,height=178/smile-icon-facebook.png');
 
     browser.pause(1000);
     saveEmployeePage.click('@saveButton');
     browser.pause(3000);
 
-    homePage.expect.element('@thirdAnniversary').text.to.contain('Anco Marzio - 2018-01-01');
+    homePage.expect.element('@thirdAnniversary').text.to.contain('Anco Marzio - 01/01/2018');
     homePage.expect.element('@thirdAnniversaryPicture').to.have.attribute('src').which.contains('https://www.spreadshirt.com/image-server/v1/mp/designs/1010111502,width=178,height=178/smile-icon-facebook.png');
 
     browser.end();

@@ -10,6 +10,7 @@ import router from './router';
 
 Vue.use(VueResource);
 Vue.use(VueMaterial);
+Vue.use(require('vue-moment'));
 
 Vue.config.productionTip = false;
 Vue.config.apiServer = process.env.API_SERVER;

@@ -17,8 +17,8 @@ module.exports = {
     browser.elements('css selector', homePage.props.anniversaryLocator, (result) => {
       browser.assert.equal(result.value.length, 2);
     });
-    homePage.expect.element('@firstAnniversary').text.to.contain('Fabio - 2017-11-01');
-    homePage.expect.element('@secondAnniversary').text.to.contain('Another Pivot - 2017-11-01');
+    homePage.expect.element('@firstAnniversary').text.to.contain('Fabio - 01/11/2017');
+    homePage.expect.element('@secondAnniversary').text.to.contain('Another Pivot - 01/11/2017');
 
     browser.end();
   },
