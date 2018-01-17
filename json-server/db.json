@@ -3,12 +3,14 @@
     {
       "name": "Fabio",
       "hireDate": "2015-11-01",
-      "anniversaryDate": "2017-11-01"
+      "anniversaryDate": "2017-11-01",
+      "photoURL": "https://www.mariowiki.com/images/thumb/c/c8/Princess_Peach_PiT.png/125px-Princess_Peach_PiT.png"
     },
     {
       "name": "Another Pivot",
       "hireDate": "2010-11-01",
-      "anniversaryDate": "2017-11-01"
+      "anniversaryDate": "2017-11-01",
+      "photoURL": "https://orig00.deviantart.net/efab/f/2010/076/3/6/mister_w_by_letourbillonenchant.jpg"
     }
   ]
 }
